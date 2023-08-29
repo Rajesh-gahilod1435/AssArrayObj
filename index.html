@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array And Object</title>
+</head>
+<body style="background-color: chocolate; color: whitesmoke;">
+    <pre>
+        Question	"let studentRecords = [ {name: 'John', id: 123, marks : 98 },
+          {name: 'Baba', id: 101, marks : 23 },
+          {name: 'yaga', id: 200, marks : 45 },
+          {name: 'Wick', id: 115, marks : 75 } ] "	
+
+    </pre><br>
+    <pre>
+        Q1.	"We are interested in retrieving only the students' names; all the names should be in caps.
+
+['JOHN', 'BABA', 'YAGA', 'WICK']"			
+
+let UpperCaseName = studentRecords.Map(Name=>Name.toUpperCase())
+console.log(UpperCaseName)
+
+    </pre><br>
+    <pre>
+        Q2.	"Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+
+[{name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"	
+
+function nam(data,threshold){
+    return data.filter(student => student.marks > threshold);
+
+} 
+let threshold(50)
+    </pre><br>
+    <pre>
+        Q3.	Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.																									
+    </pre><pre>
+       
+function getSIds(data, thresholdMarks, thresholdId) {
+    return data.filter(student => student.marks > thresholdMarks && student.id > thresholdId);
+}
+
+const thresholdMarks = 50;
+const thresholdId = 120;
+const Mark = getSIds(students, thresholdMarks, thresholdId);
+
+console.log(Mark);
+
+    </pre><br>
+    <pre>
+        Q4.	Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.	
+        
+        let sum=[];
+        for(let i=0;i<=student.length;i++){
+            sum+=sutent[i]
+        }
+    </pre><br>
+    <pre>
+        Q5.	This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.																									
+        let Name=[]
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].marks > thresholdMarks) {
+                names.push(data[i].name);
+            }
+        }
+    
+        return names;
+    </pre><br>
+    <pre>
+        Q6.	This time we are required to print the sum of marks of the students with id > 120.																									
+        function (students, thresholdId)
+        let sum = 0;
+
+        for (let student of data) {
+            if (student.id > thresholdId) {
+                sum += student.marks;
+            }
+        }
+    
+        return sum;
+        const thresholdId = 120;
+const sumMarks = claculet(students, thresholdId);
+
+console.log("Sum of marks for students with ID > 120:", sumMarks);
+
+    </pre><br>
+    <pre>
+        Q7.	This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.																									
+
+        for (let student of data) {
+            if (student.marks < thresholdMarks) {
+                totalMarks += student.marks + graceMarks;
+            } else {
+                totalMarks += student.marks;
+            }
+        }
+    
+        return totalMarks;
+    </pre><br>
+    <pre>
+        Q8.	Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. 																									
+
+        let Obj1={name:'raj',class:'12A', rollNo:121}
+        let Obj2={name:'Yogesh',class:'12A', rollNo:122}
+        let Obj3={name:'Chanda',class:'12A', rollNo:123}
+        let Obj4={name:'Skashi',class:'12A', rollNo:124}
+        let Obj5={name:'Ravi',class:'12A', rollNo:125}
+        let Obj6={name:'Satya',class:'12A', rollNo:126}
+        let AllObj={Obj1,Obj2,Obj3,Obj4,Obj5,Obj6}
+        log(AllObj)
+    </pre>
+
+</body>
+</html>
